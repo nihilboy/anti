@@ -13,7 +13,7 @@
 ### -NtQueryInformationProcess<br />
 ### -RDTSTC<br />
 ### -RtlQueryProcessDebugInformation()<br />
-### -RtlQueryProcessDebugInformation()<br />
+### -RtlQueryProcessHeapInformation()<br />
 ### -Selectors<br />
 ### -BlockInput<br />
 ### -uses SwitchDesktop() to crash the debugging session<br />
