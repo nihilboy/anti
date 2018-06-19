@@ -3,7 +3,8 @@
 ## Currently using the following techniques:<br />
 ### Anti-debugging<br />
 ___
-##### <ul>__IsDebuggerPresent()__
+<ul>
+##### <li>__IsDebuggerPresent()__
 ##### - PEB.BeingDebugged flag using speculative execution<br />
 ##### - PEB.NtGlobalFlag<br />
 ##### - Heap Flags<br />
