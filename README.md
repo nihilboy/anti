@@ -3,7 +3,7 @@
 ## Currently using the following techniques:<br />
 ### Anti-debugging<br />
 ___
-<ul><br>IsDebuggerPresent()<br/><ul/>
+<ul><br>IsDebuggerPresent()<br/>
 ##### - PEB.BeingDebugged flag using speculative execution<br />
 ##### - PEB.NtGlobalFlag<br />
 ##### - Heap Flags<br />
@@ -18,7 +18,7 @@ ___
 ##### - RtlQueryProcessHeapInformation()<br />
 ##### - Selectors<br />
 ##### - BlockInput<br />
-##### - uses SwitchDesktop() to crash the debugging session<br />
+##### - uses SwitchDesktop() to crash the debugging session<br /><ul/>
 ### Anti-VM-<br />
 ___
 ##### - CPUID (Hypervisor presence)<br />
