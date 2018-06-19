@@ -12,12 +12,12 @@ ___
 ##### - interrupt 0x2d<br />
 ##### - NtSetInformationThread()<br />
 ##### - Dynamic TlsCallbacks<br />
-##### - NtQueryInformationProcess<br />
+##### - NtQueryInformationProcess()<br />
 ##### - RDTSC<br />
 ##### - RtlQueryProcessDebugInformation()<br />
 ##### - RtlQueryProcessHeapInformation()<br />
 ##### - Selectors<br />
-##### - BlockInput<br />
+##### - BlockInput()<br />
 ##### - uses SwitchDesktop() to crash the debugging session<br /><ul/>
 ### Anti-VM-<br />
 ___
