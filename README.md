@@ -4,7 +4,7 @@
 ### Anti-debugging<br />
 ___
 <ul>
-##### <li>__IsDebuggerPresent()__
+<li><br>IsDebuggerPresent()<br/><li>
 ##### - PEB.BeingDebugged flag using speculative execution<br />
 ##### - PEB.NtGlobalFlag<br />
 ##### - Heap Flags<br />
