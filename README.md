@@ -2,6 +2,7 @@
  
 ## Currently using the following techniques:<br />
 ### Anti-debugging<br />
+...
 ##### * IsDebuggerPresent()<br />
 ##### *PEB.BeingDebugged flag using speculative execution<br />
 ##### *PEB.NtGlobalFlag<br />
@@ -19,6 +20,7 @@
 ##### *BlockInput<br />
 ##### *uses SwitchDesktop() to crash the debugging session<br />
 ### Anti-VM-<br />
+...
 ##### *CPUID (Hypervisor presence)<br />
 ##### *CPUID (Hypervisor vendor)<br />
 ##### *Number of Processors<br />
