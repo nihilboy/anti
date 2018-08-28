@@ -23,14 +23,14 @@ ___
 ##### - Selectors<br />
 ##### - BlockInput()<br />
 ##### - uses SwitchDesktop() to crash the debugging session<br /><ul/>
-### Anti-VM-<br />
+### Anti-VM<br />
 ___
 ##### - CPUID (Hypervisor presence)<br />
 ##### - CPUID (Hypervisor vendor)<br />
 ##### - Number of Processors<br />
 ##### - Device Drivers<br />
 
-## Anti bypasses the following debuggers and antidebug solutions:
+## ANTI bypasses the following debuggers and antidebug solutions:
 ##### - Idapro
 ##### - Immunity Debugger
 ##### - OllyDebugger 
