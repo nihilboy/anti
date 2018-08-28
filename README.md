@@ -1,6 +1,10 @@
-# On the fly malware hardening through anti-debugging & anti-VM techniques
- 
+# Automated Integration of anti-Reversing methods in PE executables  
 ## Currently using the following techniques:<br />
+### Unhooking
+##### - Disables function hooks by manually loading ntdll.dll from disk and check for modifications. 
+##### - If modifications exist it overwrites with the valid ntdll and calls anti-debug functions based on ntdll from there.
+##### -_Todo: Unhooking for every loaded dll_ 
+
 ### Anti-debugging<br />
 ___
 ##### - IsDebuggerPresent()<br/>
@@ -25,6 +29,20 @@ ___
 ##### - CPUID (Hypervisor vendor)<br />
 ##### - Number of Processors<br />
 ##### - Device Drivers<br />
+
+## Anti bypasses the following debuggers and antidebug solutions:
+##### - Idapro
+##### - Immunity Debugger
+##### - OllyDebugger 
+##### - CheatEngine
+##### - x64dbg
+##### - Windbg
+##### - PhantOm (anti-debug plugin for Olly) 
+##### - StrongOD (anti-debug plugin for Olly)
+##### - OllyAdvanced (anti-debug plugin for Olly) 
+##### - makin
+##### - ScyllaHide (anti-debug plugin for Olly/Ida/x64dbg)
+
 
 
 _Credits to Peter Ferrie for his [“Ultimate”Anti-Debugging Reference](http://pferrie.host22.com/papers/antidebug.pdf)_
