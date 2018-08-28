@@ -1,7 +1,7 @@
 # Automated Integration of anti-Reversing methods in PE executables  
 ## Currently using the following techniques:<br />
 ### Unhooking
-##### - Disables function hooks by manually loading ntdll.dll from disk and check for modifications. 
+##### - Disables user-mode function hooks by manually loading ntdll.dll from disk and check for modifications. 
 ##### - If modifications exist it overwrites with the valid ntdll and calls anti-debug functions based on ntdll from there.
 ##### -_Todo: Unhooking for every loaded dll_ 
 
