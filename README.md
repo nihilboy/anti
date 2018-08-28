@@ -43,6 +43,9 @@ ___
 ##### - makin
 ##### - ScyllaHide (anti-debug plugin for Olly/Ida/x64dbg)
 
+### POC: trying to debug putty.exe on x64dbg with ScyllaHide
+![alt text](https://github.com/nihilboy/anti/blob/master/scylla.jpg "Logo Title Text 1")
+![alt text](https://github.com/nihilboy/anti/blob/master/scylla_crash.jpg "Logo Title Text 1")
 
 
 _Credits to Peter Ferrie for his [“Ultimate”Anti-Debugging Reference](http://pferrie.host22.com/papers/antidebug.pdf)_
