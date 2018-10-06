@@ -1,8 +1,8 @@
 # ANTI 
 ### Automated Integration of Anti-Reversing methods in PE executables  
-- **only x86 support**
+####### _only x86 support_
 ## Currently using the following techniques:
-___
+
 **Unhooking**
  - Disables user-mode function hooks by manually loading ntdll.dll from disk and check for modifications. 
  - If modifications exist it overwrites with the valid ntdll and calls anti-debug functions based on ntdll from there.
@@ -21,7 +21,7 @@ ___
  - RDTSC
  - RtlQueryProcessDebugInformation()
  - Selectors
- - uses NtTerminateProcess() or SwitchDesktop() to terminate/crash the debugging session 
+ - Uses NtTerminateProcess() or SwitchDesktop() to terminate/crash the debugging session 
 
 **Anti-VM**
  - CPUID (Hypervisor presence)<br />
@@ -34,7 +34,7 @@ ___
  - ANTI automatically migrates in a remote process when it detects a debugger using NtCreateThreadEx technique.
 
 ## ANTI bypasses the following debuggers and antidebug solutions:
-___
+
  - Idapro, Version 7, 5
  - Immunity Debugger, Version 1.85
  - OllyDebugger v1.10, v.2
