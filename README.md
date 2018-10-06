@@ -1,6 +1,6 @@
 # ANTI 
 ### Automated Integration of Anti-Reversing methods in PE executables  
-####### _only x86 support_
+###### _only x86 support_
 ## Currently using the following techniques:
 
 **Unhooking**
