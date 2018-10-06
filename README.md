@@ -65,7 +65,8 @@
 ![alt text](https://github.com/nihilboy/anti/blob/master/scylla.jpg "Logo Title Text 1")
 ![alt text](https://github.com/nihilboy/anti/blob/master/scylla_crash.jpg "Logo Title Text 1")
 
-
+## License ##
+ANTI is licensed under the MIT License.
 
 
 _Credits to Peter Ferrie for his [“Ultimate”Anti-Debugging Reference](http://pferrie.host22.com/papers/antidebug.pdf)_
