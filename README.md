@@ -62,7 +62,7 @@ ___
 ![alt text](https://github.com/nihilboy/anti/blob/master/scylla_crash.jpg "Logo Title Text 1")
 
 ### Usage:
-anti.exe &lt;target file> <section name> <pid>_
+anti.exe &lt;target file> &lt;section name> &lt;pid>
 
 
 _Credits to Peter Ferrie for his [“Ultimate”Anti-Debugging Reference](http://pferrie.host22.com/papers/antidebug.pdf)_
