@@ -57,9 +57,11 @@
  - ApiMonitor v2
 
 ## Usage:
+
  - anti.exe &lt;target file> &lt;section name> &lt;pid>
 
-### POC: trying to debug putty.exe on x64dbg with ScyllaHide
+## POC: Bypassing ScyllaHide on x32dbg 
+
 ![alt text](https://github.com/nihilboy/anti/blob/master/scylla.jpg "Logo Title Text 1")
 ![alt text](https://github.com/nihilboy/anti/blob/master/scylla_crash.jpg "Logo Title Text 1")
 
