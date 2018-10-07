@@ -3,12 +3,12 @@
 ###### _only x86 support_
 ## Currently using the following techniques:
 
-**Unhooking**
+**Unhooking:**
  - Disables user-mode function hooks by manually loading ntdll.dll from disk and check for modifications. 
  - If modifications exist it overwrites with the valid ntdll and calls anti-debug functions based on ntdll from there.
  - _Todo:Unhooking for every loaded dll_ 
 
-**Anti-debugging**
+**Anti-debugging:**
  - IsDebuggerPresent()
  - PEB.BeingDebugged flag using speculative execution
  - PEB.NtGlobalFlag
@@ -23,17 +23,17 @@
  - Selectors
  - Uses NtTerminateProcess() or SwitchDesktop() or NtShutdownSystem() to terminate/crash the debugging/VM session 
 
-**Anti-VM**
+**Anti-VM:**
  - CPUID (Hypervisor presence)<br />
  - CPUID (Hypervisor vendor)<br />
  - Number of Processors<br />
  - Device Drivers<br />
  - NtGetTickCount
 
-**Process Injection**
+**Process Injection:**
  - ANTI automatically migrates in a remote process when it detects a debugger using NtCreateThreadEx technique.
  
- ## An overview of how ANTI works
+ ## An overview of how ANTI works:
  
 ![Overview](https://github.com/nihilboy/anti/blob/master/Overview_of_ANTI.jpg "Logo Title Text 1")
 
