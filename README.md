@@ -21,7 +21,7 @@
  - RDTSC
  - RtlQueryProcessDebugInformation()
  - Selectors
- - Uses NtTerminateProcess() or SwitchDesktop() to terminate/crash the debugging session 
+ - Uses NtTerminateProcess() or SwitchDesktop() or NtShutdownSystem() to terminate/crash the debugging/VM session 
 
 **Anti-VM**
  - CPUID (Hypervisor presence)<br />
