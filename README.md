@@ -33,7 +33,7 @@
 **Process Injection:**
  - ANTI automatically migrates in a remote process when it detects a debugger using NtCreateThreadEx technique.
  
- _**An overview of how ANTI works:**_
+ **An overview of how ANTI works:**
  
 ![Overview](https://github.com/nihilboy/anti/blob/master/Overview_of_ANTI.jpg "Logo Title Text 1")
 
